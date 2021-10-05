@@ -19,7 +19,7 @@ body {
 }
 
 i {
-   color:#AA151B;
+   color: white;
 }
 
 /* from Bulma */
@@ -52,6 +52,10 @@ i {
 .btn-red {
     background: #AA151B;
     color: white;
+}
+
+.bg-red {
+    background-color: #AA151B;
 }
 
 .shop-now-button:hover,
