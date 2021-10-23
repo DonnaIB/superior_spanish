@@ -6,25 +6,20 @@
             </a>
         </li>
 
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="classes-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}?category=classes" id="classes-link" aria-haspopup="true" aria-expanded="false">
                 Classes
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="classes-link">
-                <a href="" class="dropdown-item">Individual Class</a>
-                <a href="" class="dropdown-item">Block of 5 Classes</a>
-                <a href="" class="dropdown-item">Block of 10 Classes</a>
-            </div>
         </li>
 
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="lessons-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}?category=lessons" id="lessons-link" aria-haspopup="true" aria-expanded="false">
                 Lessons
             </a>
         </li>
 
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-white" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-white" href="{% url 'products' %}?category=short_stories" id="specials-link" aria-haspopup="true" aria-expanded="false">
                 Short Stories
             </a>
         </li>
