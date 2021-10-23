@@ -20,16 +20,16 @@
     <div class="row">
         <div class="product-container col-10 offset-1">
             <div class="row mt-1 mb-2"></div>
-            <div class="row">
+            <div class="row text-white">
                 {% for product in products %}
                 <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-5">
                     <div class="card text-center h-100 bg-red border-0">
                         <a href="{% url 'product_info' product.id %}">
-                            <i class="material-icons product-icon" alt="{{ product.name }}">{{ product.icon }}</i>
+                            <i class="material-icons product-icon mt-3" alt="{{ product.name }}">{{ product.icon }}</i>
                         </a>
                         <div class="card-body pb-0">
                             <h3 class="mb-4">{{ product.name }}</h3>
-                            <p class="mb-0 text-left">{{ product.description }}</p>
+                            <div class="mb-0 text-left">{{ product.description|safe }}</div>
                         </div>
                         <div class="card-footer bg-red pt-0 mt-2 border-0 text-left">
                             <div class="row">
