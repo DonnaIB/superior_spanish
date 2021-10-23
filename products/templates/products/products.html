@@ -14,8 +14,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">Products</h2>
-            <hr class="w-50 mb-1">
+            <h1 class="logo-font">Products</h1>
         </div>
     </div>
     <div class="row">
@@ -23,18 +22,20 @@
             <div class="row mt-1 mb-2"></div>
             <div class="row">
                 {% for product in products %}
-                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                    <div class="card h-100 border-0">
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-5">
+                    <div class="card text-center h-100 bg-red border-0">
                         <a href="{% url 'product_info' product.id %}">
-                            <i class="material-icons" style="color: red;" alt="{{ product.name }}">{{ product.icon }}</i>
+                            <i class="material-icons product-icon" alt="{{ product.name }}">{{ product.icon }}</i>
                         </a>
                         <div class="card-body pb-0">
-                            <p class="mb-0">{{ product.name }}</p>
+                            <h3 class="mb-4">{{ product.name }}</h3>
+                            <p class="mb-0 text-left">{{ product.description }}</p>
                         </div>
-                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                        <div class="card-footer bg-red pt-0 mt-2 border-0 text-left">
                             <div class="row">
                                 <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                                    <hr>
+                                    <p class="lead mb-0 text-center bg-red font-weight-bold">${{ product.price }}</p>
                                 </div>
                             </div>
                         </div>
