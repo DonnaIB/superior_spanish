@@ -46,7 +46,7 @@
 
 <body>
     <header class="container-fluid fixed-top">
-        <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
+        <div id="topnav" class="row pt-lg-2 d-none d-lg-flex bg-yellow">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="/" class="nav-link logo-link">
                     <h1 class="logo-text"><span class="text-white">Superior</span> Spanish <img class="nav-logo"
@@ -60,7 +60,7 @@
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
+                                <div><i class="material-icons nav-icon">person</i></div>
                                 <p class="my-0 text-white">My Account</p>
                             </div>
                         </a>
@@ -77,21 +77,6 @@
                             {% endif %}
                         </div>
                     </li>
-                    <!-- <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                            href="">
-                            <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                <p class="my-0 text-white">
-                                    {% if grand_total %}
-                                    ${{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                    $0.00
-                                    {% endif %}
-                                </p>
-                            </div>
-                        </a>
-                    </li> -->
                 </ul>
             </div>
             <div class="col-12 col-lg-2 my-auto py-1 py-lg-0">
@@ -102,7 +87,7 @@
                         <div class="input-group-append">
                             <button class="form-control btn btn-red border border-black rounded-sm" type="submit">
                                 <span class="icon">
-                                    <i class="fas fa-search search-icon"></i>
+                                    <i class="material-icons nav-icons">search</i>
                                 </span>
                             </button>
                         </div>
