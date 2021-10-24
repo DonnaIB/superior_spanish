@@ -23,7 +23,7 @@
             <div class="row text-white">
                 {% for product in products %}
                 <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-5">
-                    <div class="card text-center h-100 bg-red border-0">
+                    <div class="card text-center h-100 {% cycle 'bg-red' 'bg-yellow' %} border-0">
                         <a href="{% url 'product_info' product.id %}">
                             <i class="material-icons product-icon mt-3" alt="{{ product.name }}">{{ product.icon }}</i>
                         </a>
@@ -31,11 +31,11 @@
                             <h3 class="mb-4">{{ product.name }}</h3>
                             <div class="mb-0 text-left">{{ product.description|safe }}</div>
                         </div>
-                        <div class="card-footer bg-red pt-0 mt-2 border-0 text-left">
+                        <div class="card-footer {% cycle 'bg-red' 'bg-yellow' %} pt-0 mt-2 border-0 text-left">
                             <div class="row">
                                 <div class="col">
                                     <hr>
-                                    <p class="lead mb-0 text-center bg-red font-weight-bold">${{ product.price }}</p>
+                                    <p class="lead mb-0 text-center {% cycle 'bg-red' 'bg-yellow' %} font-weight-bold">${{ product.price }}</p>
                                 </div>
                             </div>
                         </div>
