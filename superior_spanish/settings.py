@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
+import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -103,12 +104,22 @@ WSGI_APPLICATION = 'superior_spanish.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+""" If DATABASE_URL is in our OS environ then use it to setup the database
+else use the default Django sqlite3 setup.
+"""
+
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'default': dj_database_url.parse('postgres://sscxvllufwjefu:8743a029bcf40fc3d6bb26840c4472ebd19de94e479331ca58146316f319ff28@ec2-54-220-14-54.eu-west-1.compute.amazonaws.com:5432/d9u6u4v6ienj5n', conn_max_age=600)
     }
-}
+
 
 
 # Password validation
