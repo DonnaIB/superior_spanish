@@ -1,0 +1,1 @@
+web: gunicorn superior_spanish.wsgi:application
