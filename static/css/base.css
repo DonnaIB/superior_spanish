@@ -6,21 +6,48 @@ body {
     /* background-color: white; */
     background-size: cover;
     height: calc(100vh - 164px);
+    padding-bottom:60px; 
     color: #202020;
     font-family: 'Roboto';
 }
+
+.sub-heading {
+    font-size: 25px;
+}
+
+a {
+    color:#F1BF00;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+/* -------------------------------- Text Colors */
+
+.text-white {
+    color: #fff !important;
+}
+
+.text-red {
+    color: #AA151B;
+}
+
+.text-yellow {
+    color: #F1BF00;
+}
+
+/* -------------------------------- Background Colors */
 
 .bg-yellow {
     background-color: #F1BF00;
 }
 
-.logo-text {
-    color: #AA151B;
+.bg-red {
+    background-color: #AA151B;
 }
 
-i {
-   color: white;
-}
+/* -------------------------------- Icons */
 
 .nav-icon {
     font-size: 40px;
@@ -34,27 +61,27 @@ i {
     font-size: 100px;
 }
 
-.logo-font {
-    text-transform: uppercase;
-}
+i {
+    color: white;
+ }
 
 .main-logo-link {
     width: fit-content;
 }
 
+/* -------------------------------- Buttons */
 .shop-now-button {
-    background: black;
+    background:#AA151B;
     color: white;
-    min-width: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 250px;
 }
 
 .btn-red {
     background: #AA151B;
     color: white;
-}
-
-.bg-red {
-    background-color: #AA151B;
 }
 
 .shop-now-button:hover,
@@ -65,10 +92,6 @@ i {
 .btn-black:focus {
     background: #202020;
     color: white;
-}
-
-.text-white {
-    color: #fff !important;
 }
 
 .border-black {
@@ -82,7 +105,9 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
+    height:60px; 
     background-color:#F1BF00;
+    border-top: black;
     color: #202020;
     text-align: center;
   }
@@ -120,4 +145,19 @@ footer {
       body {
           height: calc(100vh - 116px);
       }
+      .shop-now-button {
+        background:#AA151B;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 150px;
+    }
+    .sub-heading {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
   }

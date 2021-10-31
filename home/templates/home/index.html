@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
+    <div class="container-fluid header-container bg-yellow">
         <div class="row">
             <div class="col"></div>
         </div>
@@ -10,17 +10,38 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
+    <div class="container-fluid bg-yellow">
         <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font text-black text-center">
+            <div class="mb-5">
+                <h1 class="logo-font text-black text-center m-5">
                     Take your Spanish to the next level!
                 </h1>
-                <div class="my-5">
+                <p class="text-center text-red sub-heading m-4">Break out of intermediate purgatory and start speaking Spanish fluently.</p>
+                <div class="m-auto">
                     <h4>
-                        <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-sm text-uppercase py-3">Book a Class</a>
+                        <a href="{% url 'products' %}" class="shop-now-button btn rounded-sm text-uppercase mx-auto py-3">Book a Class</a>
                     </h4>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-red">
+        <div class="row h-100">
+            <div class="mb-5">
+                <h1 class="text-white text-center my-5">
+                    About Us!
+                </h1>
+                <p class="text-white mx-5">For those of you who don't already know, it all started with a language exchange, if you haven't heard of 
+                    <a href="https://donnaib.github.io/dublin_intercambio/" target="_blank">Dublin Intercambio</a> go check it out.
+                    From there we have listened to our langage learning community and created more resources and support to help
+                    people learn Spanish.
+                </p>
+                <p class="text-white mx-5">Superior Spanish, is specifically aimed and intermediate learners who are trying to get to an advanced level.  We know
+                    that there are a lot of resources and classes out there for beginners and lower intermediate, the A1 - B1 level. But what 
+                    we realised is that there is less recourses out there to get beyond a B2 level, to get beyond that intermediate plateau and 
+                    on to an advanced level.
+                </p>
+                <br>
             </div>
         </div>
     </div>
