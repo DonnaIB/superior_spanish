@@ -63,7 +63,7 @@ i {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
+    background: #202020;
     color: white;
 }
 
@@ -74,6 +74,18 @@ i {
 .border-black {
     border: 1px solid black !important;
 }
+
+/* -------------------------------- Footer */
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:#F1BF00;
+    color: #202020;
+    text-align: center;
+  }
 
 /* -------------------------------- Media Queries */
 

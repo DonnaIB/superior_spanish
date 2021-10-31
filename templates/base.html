@@ -50,7 +50,7 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="/" class="nav-link logo-link">
                     <h1 class="logo-text"><span class="text-white">Superior</span> Spanish <img class="nav-logo"
-                            src="/static/images/ssLogo.png" alt="logo">
+                            src="{{ MEDIA_URL }}ssLogo.png" alt="logo">
                     </h1>
                 </a>
             </div>
@@ -117,6 +117,17 @@
 
     {% block content %}
     {% endblock %}
+
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <p>
+                    <small>Superior Spanish - Copyright &copy; | Code Institue project
+                    </small>
+                </p>
+            </div>
+        </div>
+    </footer>
 
     {% block postloadjs %}
     {% endblock %}
