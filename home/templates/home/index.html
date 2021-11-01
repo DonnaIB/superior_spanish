@@ -12,16 +12,12 @@
 {% block content %}
     <div class="container-fluid bg-yellow">
         <div class="row h-100">
-            <div class="mb-5">
+            <div class="mb-5 mx-auto">
                 <h1 class="logo-font text-black text-center m-5">
                     Take your Spanish to the next level!
                 </h1>
                 <p class="text-center text-red sub-heading m-4">Break out of intermediate purgatory and start speaking Spanish fluently.</p>
-                <div class="m-auto">
-                    <h4>
-                        <a href="{% url 'products' %}" class="shop-now-button btn rounded-sm text-uppercase mx-auto py-3">Book a Class</a>
-                    </h4>
-                </div>
+                <a href="{% url 'products' %}" class="shop-now-button btn rounded-sm text-uppercase mx-auto py-3">Book a Class</a>
             </div>
         </div>
     </div>
@@ -36,7 +32,7 @@
                     From there we have listened to our langage learning community and created more resources and support to help
                     people learn Spanish.
                 </p>
-                <p class="text-white mx-5">Superior Spanish, is specifically aimed and intermediate learners who are trying to get to an advanced level.  We know
+                <p class="text-white mx-5 mb-5">Superior Spanish, is specifically aimed and intermediate learners who are trying to get to an advanced level.  We know
                     that there are a lot of resources and classes out there for beginners and lower intermediate, the A1 - B1 level. But what 
                     we realised is that there is less recourses out there to get beyond a B2 level, to get beyond that intermediate plateau and 
                     on to an advanced level.

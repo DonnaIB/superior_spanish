@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    /* background-color: white; */
+    background-color:#F1BF00;
     background-size: cover;
     height: calc(100vh - 164px);
     padding-bottom:60px; 
