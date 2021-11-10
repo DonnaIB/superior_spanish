@@ -47,8 +47,12 @@ a {
     background-color: #AA151B;
 }
 
-.bg.white {
+.bg-white {
     background-color: white;
+}
+
+.bg-green {
+    background-color: #058E6E;
 }
 
 /* -------------------------------- Icons */
@@ -112,6 +116,25 @@ i {
 .border-black {
     border: 1px solid black !important;
 }
+
+/* ------------------------------- Bootstrap Toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+
 
 /* -------------------------------- Footer */
 
