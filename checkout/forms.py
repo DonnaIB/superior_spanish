@@ -8,7 +8,7 @@ class OrderForm(forms.ModelForm):
         fields = ('first_name',
                   'last_name',
                   'email',
-                  'country',
+                  'country',)
 
     def __init__(self, *args, **kwargs):
         """
