@@ -47,6 +47,10 @@ a {
     background-color: #AA151B;
 }
 
+.bg.white {
+    background-color: white;
+}
+
 /* -------------------------------- Icons */
 
 .nav-icon {
@@ -79,6 +83,14 @@ i {
     max-width: 250px;
 }
 
+.buy-button {
+    background:#AA151B;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    max-width: 250px;
+}
+
 .btn-red {
     background: #AA151B;
     color: white;
@@ -87,6 +99,9 @@ i {
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
+.buy-button:hover,
+.buy-button:active,
+.buy-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
