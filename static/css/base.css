@@ -16,8 +16,21 @@ body {
 }
 
 a {
-    color:#F1BF00;
+    color:#058E6E;
 }
+
+a:hover {
+    color:white;
+}
+
+.link_yellow {
+    color:#F1BF00; 
+}
+
+.link_yellow:hover {
+    color:#058E6E; 
+}
+
 
 .logo-font {
     text-transform: uppercase;
@@ -129,11 +142,6 @@ i {
 .custom-toast {
     overflow: visible;
 }
-
-.toast-capper {
-    height: 2px;
-}
-
 
 
 /* -------------------------------- Footer */
