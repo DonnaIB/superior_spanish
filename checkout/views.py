@@ -35,13 +35,12 @@ def checkout(request, product_id):
             messages.success(
                 request, 'Your new purchase has been made successfully.')
 
-            return redirect('checkout/checkout.html')
+            return redirect('/products')
         
     else:
         
         product = get_object_or_404(Product, pk=product_id)
         order_form = OrderForm()
-
         total = product.price
         stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
@@ -50,6 +49,9 @@ def checkout(request, product_id):
                 currency=settings.STRIPE_CURRENCY,
         )
 
+    if not stripe_public_key:
+        messages.warning(request, 'Stripe public key is missing. \
+            Did you forget to set it in your environment?')
 
     template = 'checkout/checkout.html'
     context = {
