@@ -13,8 +13,8 @@ var style = {
         }
     },
     invalid: {
-        color: '#dc3545',
-        iconColor: '#dc3545'
+        color: '#AA151B',
+        iconColor: '#AA151B'
     }
 };
 var card = elements.create('card', {style: style});
