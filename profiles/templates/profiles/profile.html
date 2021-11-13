@@ -18,12 +18,12 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h2 class="logo-font mb-4">{{ user.userprofile}} Profile</h2>
+                <h2 class="logo-font mb-4">{{ user.userprofile}}'s Profile</h2>
                 <hr>
             </div>
         </div>
         <div class="row">
-                <p class="lead text-muted">Order History</p>
+                <p class="lead text-red">Order History</p>
                 <div class="order-history table-responsive">
                     <table class="table table-sm table-borderless">
                         <thead>
@@ -48,14 +48,14 @@
                     {% for order in orders %}
                         {% if order.product.name == "Pre Recorded Lessons" %}
                             <div>
-                                <p class="lead text-muted">Recorded Lessons</p>
+                                <p class="lead text-red">Recorded Lessons</p>
                                 <p>Click this <a href="{% url 'recorded_lessons' %}">link</a> to access your lessons.</p>
                             </div>
                             <hr>
                         {% elif order.product.name == "Short Stories in Spanish" %}
 
                         <div>
-                            <p class="lead text-muted">Short Stories</p>
+                            <p class="lead text-red">Short Stories</p>
                             <p>Click this <a href="{% url 'short_stories' %}">link</a> to access your Short Stories.</p>
                         </div>
                         <hr>
