@@ -52,3 +52,4 @@ def product_info(request, product_id):
     }
 
     return render(request, 'products/product_info.html', context)
+
