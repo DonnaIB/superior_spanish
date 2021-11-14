@@ -22,11 +22,19 @@ a:hover {
     color:white;
 }
 
-.link_yellow {
+.link-red {
     color:#AA151B; 
 }
 
-.link_yellow:hover {
+.link-red:hover {
+    color:#058E6E; 
+}
+
+.link-white {
+    color: white; 
+}
+
+.link-white:hover {
     color:#058E6E; 
 }
 

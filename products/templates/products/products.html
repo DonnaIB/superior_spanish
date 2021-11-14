@@ -40,6 +40,11 @@
                                     <a href="{% url 'product_info' product.id %}" class="btn {% cycle 'buy-button-yellow' 'buy-button' %} rounded-sm m-3">More Info</a>
                                 </div>
                             </div>
+                            {% if request.user.is_superuser %}
+                                <small>
+                                    <a class="link-white" href="{% url 'edit_product' product.id %}">Edit</a> | <a class="link-white" href="{% url 'delete_product' product.id %}">Delete</a> 
+                                </small>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
