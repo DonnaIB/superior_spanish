@@ -25,14 +25,14 @@ def all_products(request):
             query = request.GET['q']
             if not query:
                 messages.error(request, "You didn't enter any search criteria!")
-                return redirect(reverse('products'))
+                return redirect(reverse('home'))
             
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
             if not products:
                 messages.info(request, "Sorry there is nothing matching your search criteria!")
-                return redirect(reverse('products'))
+                return redirect(reverse('home'))
 
     context = {
         'products': products,
@@ -47,28 +47,39 @@ def product_info(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
-    profile = get_object_or_404(UserProfile, user=request.user)
-    orders = profile.orders.all()
-    stories = False
-    lessons = False
+    
 
-    for order in orders:
-        if order.product.id == 3:
-            print("3")
-            lessons = True
+    if request.user.is_authenticated:
 
-        elif order.product.id == 4:
-            print("4")
-            stories = True
+        profile = get_object_or_404(UserProfile, user=request.user)
+             
+        orders = profile.orders.all()
+        stories = False
+        lessons = False
+
+        for order in orders:
+            if order.product.id == 3:
+                print("3")
+                lessons = True
+
+            elif order.product.id == 4:
+                print("4")
+                stories = True
 
 
+        context = {
+            'product': product,
+            'orders': orders,
+            'lessons': lessons,
+            'stories': stories
+
+        }
+
+        return render(request, 'products/product_info.html', context)
+    
     context = {
         'product': product,
-        'orders': orders,
-        'lessons': lessons,
-        'stories': stories
-
-    }
+        }
 
     return render(request, 'products/product_info.html', context)
 

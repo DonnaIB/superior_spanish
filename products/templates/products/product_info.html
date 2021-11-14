@@ -19,13 +19,13 @@
                 <p class="mb-0">{{ product.name }}</p>
                 <p class="lead mb-0 font-weight-bold">${{ product.price }}</p>
                 <p>{{ product.description|safe }}</p>
-                {% if product.id == 3 and lessons == True %}
-                    <a class="btn mb-3 buy-button" disabled href="{% url 'profile' %}">View in profile</a>
-                {% elif product.id == 4 and stories == True %}
-                    <a class="btn mb-3 buy-button" disabled href="{% url 'profile' %}">View in profile</a>
-                {% else %}
-                    <a class="btn mb-3 buy-button" disabled href="{% url 'checkout' product.id %}">Buy</a>
-                {% endif %}
+                    {% if product.id == 3 and lessons == True %}
+                        <a class="btn mb-3 buy-button" disabled href="{% url 'profile' %}">View in profile</a>
+                    {% elif product.id == 4 and stories == True %}
+                        <a class="btn mb-3 buy-button" disabled href="{% url 'profile' %}">View in profile</a>
+                    {% else %}
+                        <a class="btn mb-3 buy-button" disabled href="{% url 'checkout' product.id %}">Buy</a>
+                    {% endif %}
             </div>
         </div>
     </div>

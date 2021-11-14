@@ -23,7 +23,7 @@ a:hover {
 }
 
 .link_yellow {
-    color:#F1BF00; 
+    color:#AA151B; 
 }
 
 .link_yellow:hover {
@@ -101,6 +101,14 @@ i {
 
 .buy-button {
     background:#AA151B;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    max-width: 250px;
+}
+
+.buy-button-yellow {
+    background:#F1BF00;
     color: white;
     justify-content: center;
     align-items: center;
