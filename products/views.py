@@ -4,6 +4,7 @@ from django.db.models import Q
 from .models import Product, Category
 from profiles.models import UserProfile
 from checkout.models import Order
+from .forms import ProductForm
 # Create your views here.
 
 
@@ -81,3 +82,24 @@ def product_info(request, product_id):
         }
 
     return render(request, 'products/product_info.html', context)
+
+
+def add_product(request):
+    """ Add a product """
+    if request.method == 'POST':
+        form = ProductForm(request.POST)
+        if form.is_valid():
+            product = form.save()
+            messages.success(request, 'Your new product has been added!')
+            return redirect(reverse('product_info', args=[product.id]))
+        else:
+            messages.error(request, 'Product not added. Please check the form is valid.')
+    else:
+        form = ProductForm()
+        
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
