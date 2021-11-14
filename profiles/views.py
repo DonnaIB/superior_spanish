@@ -8,11 +8,17 @@ def profile(request):
     profile = get_object_or_404(UserProfile, user=request.user)
 
     orders = profile.orders.all()
+    classes = False
+
+    for order in orders:
+        if order.product.id == 1 or 2:
+            print("class")
+            classes = True
 
     template = 'profiles/profile.html'
     context = {
         'orders': orders,
-        'on_profile_page': True
+        'classes': classes,
     }
 
     return render(request, template, context)
