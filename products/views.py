@@ -47,12 +47,11 @@ def product_info(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
-    
 
     if request.user.is_authenticated:
 
         profile = get_object_or_404(UserProfile, user=request.user)
-             
+        
         orders = profile.orders.all()
         stories = False
         lessons = False
@@ -76,10 +75,9 @@ def product_info(request, product_id):
         }
 
         return render(request, 'products/product_info.html', context)
-    
+
     context = {
         'product': product,
         }
 
     return render(request, 'products/product_info.html', context)
-
