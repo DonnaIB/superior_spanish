@@ -89,7 +89,7 @@ def product_info(request, product_id):
 def add_product(request):
     """ Add a product """
     if not request.user.is_superuser:
-        messages.error(request, "orry! You don't have authorisation to perform this task.")
+        messages.error(request, "Sorry! You don't have authorisation to perform this task.")
         return redirect(reverse('home'))
 
     if request.method == 'POST':
