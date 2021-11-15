@@ -63,7 +63,11 @@
                             aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="material-icons nav-icon">person</i></div>
-                                <p class="my-0 text-white">My Account</p>
+                                {% if request.user.is_authenticated %}
+                                    <p class="my-0 text-white">My Account</p>
+                                {% else %}
+                                    <p class="my-0 text-white">Log In / Register</p>
+                                {% endif %}
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
