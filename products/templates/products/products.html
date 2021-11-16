@@ -17,7 +17,7 @@
             <div class="row mt-1 mb-2"></div>
             <div class="row {% cycle 'text-white' 'text-red' %}">
                 {% for product in products %}
-                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 w-75 mb-5">
+                <div class="col w-75 mb-5">
                     <div class="card text-center h-100 {% cycle 'bg-red' 'bg-white' %} border-0">
                         <a href="{% url 'product_info' product.id %}">
                             <i class="material-icons product-icon mt-3 {% cycle 'text-white' 'text-red' %}" alt="{{ product.name }}">{{ product.icon }}</i>
@@ -34,7 +34,7 @@
                                 </div>
                             </div>
                             {% if request.user.is_superuser %}
-                                <small {% cycle 'link-white' 'link-red' %}>
+                                <small class="{% cycle 'link-white' 'link-red' %}">
                                     <a class="{% cycle 'link-white' 'link-red' %}" href="{% url 'edit_product' product.id %}">Edit</a> | <a class="{% cycle 'link-white' 'link-red' %}" href="{% url 'delete_product' product.id %}">Delete</a> 
                                 </small>
                             {% endif %}
