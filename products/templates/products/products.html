@@ -11,29 +11,22 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container-fluid bg-white">
-    <div class="row">
-        <div class="col text-center mt-3">
-            <h1 class="logo-font">Products</h1>
-        </div>
-    </div>
+<div class="container-fluid">
     <div class="row">
         <div class="product-container col-10 offset-1">
             <div class="row mt-1 mb-2"></div>
-            <div class="row text-white">
+            <div class="row {% cycle 'text-white' 'text-red' %}">
                 {% for product in products %}
-                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-5">
-                    <div class="card text-center h-100 {% cycle 'bg-red' 'bg-yellow' %} border-0">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 w-75 mb-5">
+                    <div class="card text-center h-100 {% cycle 'bg-red' 'bg-white' %} border-0">
                         <a href="{% url 'product_info' product.id %}">
-                            <i class="material-icons product-icon mt-3" alt="{{ product.name }}">{{ product.icon }}</i>
+                            <i class="material-icons product-icon mt-3 {% cycle 'text-white' 'text-red' %}" alt="{{ product.name }}">{{ product.icon }}</i>
                         </a>
                         <div class="card-body pb-0">
-                            <h3 class="mb-4">{{ product.name }}</h3>
-                            <p class="lead mt-4 text-center {% cycle 'bg-red' 'bg-yellow' %} font-weight-bold">${{ product.price }}</p>
-
-                            <!-- <div class="mb-0 text-left">{{ product.description|safe }}</div> -->
+                            <h3 class="mb-4 {% cycle 'text-white' 'text-red' %}">{{ product.name }}</h3>
+                            <p class="lead mt-4 text-center {% cycle 'bg-red' 'bg-white' %} {% cycle 'text-white' 'text-red' %} font-weight-bold">${{ product.price }}</p>
                         </div>
-                        <div class="card-footer {% cycle 'bg-red' 'bg-yellow' %} pt-0 border-0">
+                        <div class="card-footer {% cycle 'bg-red' 'bg-white' %} pt-0 border-0">
                             <div class="row">
                                 <div class="col">
                                     <hr>
@@ -41,8 +34,8 @@
                                 </div>
                             </div>
                             {% if request.user.is_superuser %}
-                                <small>
-                                    <a class="link-white" href="{% url 'edit_product' product.id %}">Edit</a> | <a class="link-white" href="{% url 'delete_product' product.id %}">Delete</a> 
+                                <small {% cycle 'link-white' 'link-red' %}>
+                                    <a class="{% cycle 'link-white' 'link-red' %}" href="{% url 'edit_product' product.id %}">Edit</a> | <a class="{% cycle 'link-white' 'link-red' %}" href="{% url 'delete_product' product.id %}">Delete</a> 
                                 </small>
                             {% endif %}
                         </div>
