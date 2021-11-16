@@ -1,9 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
-{% endblock %}
 
 {% block page_header %}
 <div class="container header-container">
@@ -16,11 +13,23 @@
 {% block content %}
 <div class="overlay"></div>
 <div class="container">
-    <div class="row">
-        <div class="col">
-            <h2 class="logo-font mb-4">Short Stories in Spanish</h2>
-            <hr>
-        </div>
-    </div>
+    <h2 class="logo-font mt-4">Spanish Short Stories</h2>
+    <hr>
+    <p class="mb-5 mt-2">Below you have access to all our Short Stories. We will be adding to these all the time
+        so keep checking back to see new content.</p>
+    <a href="{{ MEDIA_URL }}ss_la_ciguapa.pdf">La Ciguapa
+    </a>
+    <hr class="my-5">
+    <a href="{{ MEDIA_URL }}ss_stories_cubana.pdf">Cubana
+    </a>
+    <hr class="my-5">
+    <a href="{{ MEDIA_URL }}ss_stories_libro_magico.pdf">El Libro Magico
+    </a>
+    <hr class="my-5">
+    <a class="mb-5" href="{{ MEDIA_URL }}ss_stories_porypara.pdf">La Novela
+    </a>
+ 
+
+
 </div>
 {% endblock %}

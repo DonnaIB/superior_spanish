@@ -1,9 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
-{% endblock %}
 
 {% block page_header %}
 <div class="container header-container">
@@ -16,11 +13,34 @@
 {% block content %}
 <div class="overlay"></div>
 <div class="container">
-    <div class="row">
-        <div class="col">
-            <h2 class="logo-font mb-4">Spanish Lessons</h2>
-            <hr>
-        </div>
+    <h2 class="logo-font mt-4">Spanish Lessons</h2>
+    <hr>
+    <p class="mb-5 mt-2">Below you have access to all our Pre Recorded Lessons. We will be adding to these all the time
+        so keep checking back to see new content.</p>
+    <div class="embed-responsive embed-responsive-16by9 w-50">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CO3encGFr2o"
+            title="YouTube video player" allowfullscreen></iframe>
     </div>
+    <p class="my-3">Title goes here</p>
+    <hr class="my-5">
+    <div class="embed-responsive embed-responsive-16by9 w-50">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4uHgqVaHmv8"
+            title="YouTube video player" allowfullscreen></iframe>
+    </div>
+    <p class="my-3">Title goes here</p>
+    <hr class="my-5">
+    <div class="embed-responsive embed-responsive-16by9 w-50">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7kbACgcnG8M"
+            title="YouTube video player" allowfullscreen></iframe>
+    </div>
+    <p class="my-3">Title goes here</p>
+    <hr class="my-5">
+    <div class="embed-responsive embed-responsive-16by9 w-50">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/bJ5hS6LCfn8"
+            title="YouTube video player" allowfullscreen></iframe>
+    </div>
+    <p class="my-3">Title goes here</p>
+
+
 </div>
 {% endblock %}
