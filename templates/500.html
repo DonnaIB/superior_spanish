@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}| 404 Error{% endblock %}
+
+
+{% block content %}
+<div class="row">
+<div class="col-12 col-lg-6">
+    <h2 class="my-5">¡Ay, caramba! You seem to be lost!</h2>
+    <hr>
+    <p>Let's get you back home</p>
+    <a class="btn buy-button" href="{% url 'home' %}"> Home</a>
+</div>
+</div>
+{% endblock %}

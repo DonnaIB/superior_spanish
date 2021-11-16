@@ -130,6 +130,7 @@ Every page on this site also incorporates the following features:
 - Gitpod was used an the IDE for building the site.
 - **Bootstrap4** was used to assist with the structure, responsiveness and browser compatibility of the site. 
 - BootstrapCDN was used to provide icons from **Font Awesome**. 
+- **Material Design** was used to provide some of the icons in the nav and the product icons.
 - **Google fonts** was used to style the website fonts.
 - **jQuery** to reference Javascript needed for the responsive navbar.
 - **Popper.js** reference Javascript needed for the responsive navbar.
