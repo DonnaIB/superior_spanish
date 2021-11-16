@@ -60,11 +60,9 @@ def product_info(request, product_id):
 
         for order in orders:
             if order.product.id == 3:
-                print("3")
                 lessons = True
 
             elif order.product.id == 4:
-                print("4")
                 stories = True
 
 

@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from .models import UserProfile
 from checkout.models import Order
 
@@ -11,7 +12,6 @@ def profile(request):
 
     for order in orders:
         if order.product.id == 1 or 2:
-            print("class")
             classes = True
 
     template = 'profiles/profile.html'
@@ -22,12 +22,13 @@ def profile(request):
 
     return render(request, template, context)
 
+
+@login_required
 def short_stories(request):
     """ A view to return the short stories page """
+    return render(request, 'profiles/recorded_lessons.html')    
 
-    return render(request, 'profiles/short_stories.html')
-
-
+@login_required
 def recorded_lessons(request):
     """ A view to return the recorded lessons page """
 
