@@ -81,30 +81,8 @@ def checkout(request, product_id):
         }
 
         return render(request, template, context)
-    
+ 
     messages.info(request, 'Please log in before purchasing')
 
     return redirect(reverse('account_login'))
 
-
-# def checkout_success(request, order_number):
-#     """
-#     Handle successful checkouts
-#     """
-#     save_info = request.session.get('save_info')
-#     order = get_object_or_404(Order, order_number=order_number)
-
-#     profile = UserProfile.objects.get(user=request.user)
-#     order.user_profile = profile
-#     order.save()
-    
-#     messages.success(request, f'Order successfully processed! \
-#         Your order number is {order_number}. A confirmation \
-#         email will be sent to {order.email}.')
-
-#     template = 'profile/profile.html'
-#     context = {
-#         'order': order,
-#     }
-
-#     return render(request, template, context)
