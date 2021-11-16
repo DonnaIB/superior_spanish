@@ -262,12 +262,21 @@ Site owner
 
 ### Functionally Test Cases
 
-Registration & Log In:
-1. 
-2.
+#### Allauth Authentication:
+1. Test registration form by registering, ensure a verrificaiton email is received, follow the link then log in.
+2. Test the validation of the registartion form but trying to enter a username with only 2 letters, ensure validation message is shown.
+3. Once registered, log in and try to log in using new credentials to test the log in form. Ensure you are logged in and success message is shown.
+4. Log out, then navigation back to the log in page, but this time click on the forgotten password link. Ensure an email is received and instructions can be followed.
 
 
-CRUD:
+#### Checkout
+1. While logged in as a user or super user, selected a product to buy, and click the 'buy' button. Ensure you are taken to the checkout page.
+2. Complete the form, enter 4242 4242 4242 4242 as the card number, a random three-digit CVC number, and any expiration date in the future. Ensure the payment success message is shown and you are redirected to your profile page with your new purchase showing.
+3. Try to submit the form with no data and ensure the validation message is shown.
+4. Try to submit the form with invalid data such as an expiration date from the past and ensure the error message is shown.
+5. As an non logged in user try to buy a product and ensure you are redirected to the Log in page and a message is shown to asking the user to log in before purchasing.
+
+#### CRUD:
 1. While logged in as a superuser, chose "Add Product" from the My Account menu in the navigation. Ensure you are directed to the add product page and can complete the form and click the 'Add' button.
 2. Navigate to the admin section and confirm the new product has been added. 
 3. Navigate to the product page on the front end and make sure the new product is visible.
@@ -277,7 +286,7 @@ CRUD:
 7. Repeat steps 2 & 3 to ensure the deleted product is no longer in the DB or visible on the Front End.
 
 
-Security and Validation:
+#### Security and Validation:
 1. While logged out ensure the account icon says 'Log in / Register', then log in and make sure this changes to say 'My Account'
 2. Try to make a purchase while logged out. Ensure you are redirected to the log in page with a message saying to log in before purchasing.
 3. Log in, make a purchase of either Pre Recorded Lessons or Short Stories. Navigate back to the product page and try to purchase it again. Make sure the button says
