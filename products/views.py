@@ -6,7 +6,7 @@ from .models import Product, Category
 from profiles.models import UserProfile
 from checkout.models import Order
 from .forms import ProductForm
-# Create your views here.
+
 
 
 def all_products(request):

@@ -197,7 +197,7 @@ footer {
       }
   }
   
-  /* pad the top a bit when navbar is collapsed on mobile */
+  /* pad the top when navbar is collapsed on mobile */
   @media (max-width: 991px) {
       .header-container {
           padding-top: 116px;
