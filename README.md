@@ -79,7 +79,7 @@ Site owner
 4. As a site owner, I want to be able to delete a product or service from the site so that I can remove them if they are no longer available.
 
 
-### Design (Wireframes and Mockups): 
+## Design (Wireframes and Mockups): 
 The design is simple, modern, fully responsive and has a connection to the [Dublin Intercambio](https://donnaib.github.io/dublin_intercambio/) site from my Ms1 project, this connection will be achieved by utilising the same color palette and logo throughout. As before the inspiration for this colour palette was to harness the Spanish connection and influence of the project.
 
 I am aware that yellow can sometimes be a problematic colour, however it remains an important element of the design due the fact that it is a key colour of the Spansih flag. With this in mind special I was careful to utilize the color in a way that added to the design of the site, but didn't not compromise the accessibility of the site.
@@ -99,6 +99,11 @@ I used Balsamiq to create detailed Wireframes for mobile and desktop site, for t
 ![Larger Screen wireframe](static/images/LargeScreenWireframes.png)
 
 
+### Database Design
+
+![Database Models](static/images/database_models.png)
+
+Image created using [DrawSQL](https://drawsql.app/)
 
 ## Features
 
@@ -137,9 +142,9 @@ Every page on this site also incorporates the following features:
 * A responsive footer.
 
 ### Possible Features to Implement in Future
-* If more products or services are added to the site then I would look at adding a shopping bag to the site.
+* If more products or services are added to the site then I might look at adding a shopping bag to the site.
 * Could possibly add reviews or testimonials to the site in the future.
-* Feature to keep track of how many classes a user has purchased and how many have been use. Running total showing in user profile and admin option for a superuser to reduce the total by one every time a class has happened.
+* Feature to keep track of how many classes a user has purchased and how many have been use. Running total showing in user profile and admin option for a superuser to reduce the total by one every time a class has taken place.
 * Add a confirmation pop up on the delete product button.
 
 
@@ -154,24 +159,14 @@ Every page on this site also incorporates the following features:
 - **Popper.js** to reference Javascript needed for the responsive navbar.
 - **Stripe** was uses to process payments.
 
+
 ## Testing
 
 I tested the site in the following ways:
 
 1. Initially I used the inspector tool to test the site in all the screen sizes and devices available in the Chrome developer tool.  In addition to this I also tested it on live devices, including but not limited to iPhone, iPad, MacBook Pro, MotoG7. 
 
-2. I also tested my code using the validator tools for both my HTML [W3C HTML Validator Tool](https://validator.w3.org/), CSS [W3C CSS Validator Tool](https://validator.w3.org/) and I also checked my JavaScript code using [JSHint](https://jshint.com/) Running my code through these tools highlighted a few issues with syntax which have been fixed.
-
-Screen shots of the HTML & CSS validator results can be viewed below, as you can see there were no errors detected.
-
-![HTML Validation Report - Home](documentation/validation/validator_index.png)
-![HTML Validation Report - Product](documentation/validation/validator_about.png)
-![HTML Validation Report - Product_info](documentation/validation/validator_scores.png)
-![HTML Validation Report - Profile](documentation/validation/validator_addName.png)
-![HTML Validation Report - Stories](documentation/validation/validator_addName.png)
-![HTML Validation Report - Lessons](documentation/validation/validator_addName.png)
-![HTML Validation Report - Base](documentation/validation/validator_contact.png)
-![CSS Validation Report](documentation/validation/validator_css.png)
+2. I also tested my code using the validator tools for both my HTML [W3C HTML Validator Tool](https://validator.w3.org/), CSS [W3C CSS Validator Tool](https://jigsaw.w3.org/css-validator/validator) and no errors were found.
 
 3. All links were tested to ensure there were no broken links and that all links to external sites open in a new tab.
 
@@ -286,11 +281,10 @@ Site owner
 7. Repeat steps 2 & 3 to ensure the deleted product is no longer in the DB or visible on the Front End.
 
 
-#### Security and Validation:
+#### Security, Business Logic and Valaidation:
 1. While logged out ensure the account icon says 'Log in / Register', then log in and make sure this changes to say 'My Account'
 2. Try to make a purchase while logged out. Ensure you are redirected to the log in page with a message saying to log in before purchasing.
-3. Log in, make a purchase of either Pre Recorded Lessons or Short Stories. Navigate back to the product page and try to purchase it again. Make sure the button says
-	'View in Profile' and redirects you to your profile to access the resource you had previously purchased.
+3. Log in, make a purchase of either Pre Recorded Lessons or Short Stories. Navigate back to the product page and try to purchase it again. Make sure the button says 'View in Profile' and redirects you to your profile to access the resource you had previously purchased.
 4. Navigate to the checkout page and enter invalid information such as an incorrect card number and ensure the validation message is shown. 
 5. Navigate to the Add and Edit Product pages and add an invalid price such as 123356.99 and ensure the error message is shown.
 6. While logged out try and access the Add, Edit & Delete Product pages, ensure you are redirect away from these pages and the error message is shown.
@@ -298,16 +292,15 @@ Site owner
 8. Repeat step 6 while logged in as a super user and ensure you are taken to the form page and able to add and edit a product.
 
 
-
-
 ### Accessibility
-In addition to all the above testing I also checked my site with accessibility tools in the inspector. ![Accessibility Check Screenshot](documentation/validation/accessibility_check.png)
+In addition to all the above testing I also checked my site with accessibility tools in the inspector. Across the site I scored an average of 89.
 
 ### Bugs & Issues
 
 * When connecting my database I accidentally commited my DATABASE_URL to github. I realised what I had done and knew that I had to fix this error.  I deleted the DB I had already created and created a new one so that they details that were in Gitpod were rendered useless and I started again with a new DB and made sure not to commit that to Github.  
 
 * I deployed early as advised but this seemed to cause a migration issue. I worked with a channel lead to help debug an error I was seeing in live but not locally. I was getting a 500 error when I tried to access admin in the live site but no issues locally. In the end I had to temporarilty add my Postgres DB detailts for settings.py and check for a migration, there was one waiting to run, I ran it and that solved the issue.
+
 
 ## Deployment. 
 
@@ -318,13 +311,6 @@ In addition to all the above testing I also checked my site with accessibility t
 - Github account
 - Heroku account
 - Heroku Postgres 
-
-There are XX models for this site.
-1. 
-2. 
-3.
-4. 
-(See DB design for details of the documents within each collection)
 
 
 ### How to run this project locally
@@ -416,7 +402,6 @@ git clone https://github.com/DonnaIB/superior_spanish.git
 	- Remove the Postgres database URL from settings.py as this should not in any case be deployed to GitHub for security reasons.
 
 
-
 6. Deploy the App
 	
 	- In the Automatic Deploys section choose a branch to deploy
@@ -425,18 +410,19 @@ git clone https://github.com/DonnaIB/superior_spanish.git
 7. When the app build is complete, click 'Open App' button to open the app
 
 
-
-
 ## Credits
 
 ### Content
 The content of the site was written by myself and inspired by previous fictional projects.
 
 ### Code
-- Code for my footer was adapted from my Ms3 project. 
+- [Delibrate Spanish](https://www.deliberatespanish.com/) for the videos I have used in the Lessons page. There videos were availble via YouTube.
+- [I will teach you a language](https://iwillteachyoualanguage.teachable.com/) for the inspriation for names of short stories and grammer points used in the Shorts Stories page.
+- Code Institue - [BoutiqueAdo tutorial](https://github.com/Code-Institute-Solutions/boutique_ado_v1)
 
 
 ### Acknowledgements
 * My color scheme for this site was based on the colors in the Spanish flag and I used a colour scheme from [Scheme Color](https://www.schemecolor.com/spain-flag-colors.php), the specific color combination was created by user Keshav Naidu.
 * Massive thanks to Melinda Zhang who helped me debug an issue I was having due to a migration only running locally.
+* I would also think to thank the team at Tutor Support for helping me debug problems when I was very stressed! Thank you for your advice and patience.
 * A final thank to my mentor Rahul Lakhanpal who has advised and guided me through this Milestone 4 project.
