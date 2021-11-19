@@ -120,7 +120,7 @@ All products are visible on the homes page, but the navigation also offers a way
 #### Logged In Users
 
 ##### Profile
-In addition to the above, logged in users will also see a profile page. This profile page will show users they order history and it will also provide 
+In addition to the above, logged in users will also see a profile page. This profile page will show users their order history and it will also provide 
 access to their purchases. 
 - If a user has bought classes, there will be a link to book a class. 
 - If a user has bought short stories, there will be a link to view the stories
@@ -418,7 +418,7 @@ The content of the site was written by myself and inspired by previous fictional
 ### Code
 - [Delibrate Spanish](https://www.deliberatespanish.com/) for the videos I have used in the Lessons page. There videos were availble via YouTube.
 - [I will teach you a language](https://iwillteachyoualanguage.teachable.com/) for the inspriation for names of short stories and grammer points used in the Shorts Stories page.
-- Code Institue - [BoutiqueAdo tutorial](https://github.com/Code-Institute-Solutions/boutique_ado_v1)
+- Elements of this site is base on and inspired by the Code Institue [BoutiqueAdo tutorial](https://github.com/Code-Institute-Solutions/boutique_ado_v1)
 
 
 ### Acknowledgements
